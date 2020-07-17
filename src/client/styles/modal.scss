@@ -1,0 +1,53 @@
+/* Weather Modal */
+
+#id02 {
+  display: none;
+  header {
+    background-color: #2f4f4f !important;
+    padding-bottom: 30px;
+  }
+
+  #entryHolder {
+    padding: 40px 0;
+    overflow: auto;
+
+    table {
+      width: 100%;
+    }
+
+    th,
+    td,
+    p,
+    input {
+      font: 14px Verdana;
+    }
+    table,
+    th,
+    td {
+      border: solid 2px #ddd;
+      border-collapse: collapse;
+      padding: 2px 3px;
+      text-align: center;
+    }
+    th {
+      font-weight: bold;
+    }
+  }
+}
+
+
+.w3-container img{
+  background-color: seagreen;
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  /* background-color: #efefef; */
+  margin-top: -40px;
+}
+
+#id03 header{
+  background-color: #2F4F4F !important;
+  padding-bottom: 30px;
+}

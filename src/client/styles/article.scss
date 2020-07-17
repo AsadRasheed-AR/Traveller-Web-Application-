@@ -1,0 +1,37 @@
+// Styling of Article Section
+
+article {
+    display: block;
+    margin: auto;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #efefef86;
+    border-radius: 10px;
+    color: #efefef;
+
+    .container_article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            color: black;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+        hr {
+            background-color: black;
+            width: 80%;
+        }
+        p {
+            font-family: 'MyFont';
+            font-size: 1.3em;
+            color: black;
+            text-align: justify;
+            font-style: italic;
+        }
+    }
+}

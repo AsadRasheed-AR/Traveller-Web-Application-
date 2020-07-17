@@ -1,0 +1,12 @@
+// Ovelall Layout of Webpage
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-gap: 20px;
+    height: auto;
+    min-width: 360px;
+
+    background-image: linear-gradient(#808080, #3fada8);
+    font-size: 16px;
+}

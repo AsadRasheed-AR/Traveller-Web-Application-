@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- External Style Sheets for Icons and NavBar etc -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Textraction - Get Insights Easily</title>
+</head>
+
+<body>
+    <!-- Webpage Header Section -->
+    <header>
+        <div class="container_header">
+            <div class="header_log">
+                <!-- Source will be lodaed by Js -->
+                <img src="" alt="NLP Logo" id="logo">
+            </div>
+            <div class="header_siteName">
+                <h1>T<span>extraction</span> </h1>
+                <h4>Get Insights Easily!</h4>
+            </div>
+        </div>
+    </header>
+
+    <!-- Webpage Article Section -->
+    <article>
+        <div class="container_article">
+            <h1>Welcome to TEXTRACTION !!!</h1>
+            <hr>
+            <p>We make it easy to parse, analyze, and extract structured data from human-generated text and content!</p>
+            <p>Extract what matters from documents, web pages, blogs, Tweets, and reviews, or any textual content.
+                Understand what or who a document mentions, what topics it deals with, and what the sentiment of a piece
+                of text is.</p>
+        </div>
+    </article>
+
+    <!-- Webpage Main Section -->
+    <main>
+        <div class="topnav" id="myTopnav">
+            <a id="nav_heading" class="active">Classification</a>
+            <a onclick="Client.openCity(event,'Classification')">Classification</a>
+            <a onclick="Client.openCity(event,'Classification_T')">Classification by Taxonomy</a>
+            <a onclick="Client.openCity(event,'Sentiment_Analysis')">Sentiment Analysis</a>
+            <a onclick="Client.openCity(event,'Summarization')">Summarization</a>
+            <a href="javascript:void(0);" class="icon" onclick="Client.myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="Classification" class="w3-container w3-border city">
+            <h2>Classification</h2>
+            <hr>
+            <!-- Form -->
+            <div class="container_form">
+                <form>
+                    <label for="input_type">Selet Input Type</label> <br>
+                    <select class="input_type" name="input_type">
+                        <option value="URL">URL</option>
+                        <option value="TEXT">TEXT</option>>
+                    </select> <br>
+
+                    <label for="t_r_input">Enter Text or URL Acc to Input Type</label>
+                    <textarea name="t_r_input" class="t_r_input" cols="30" rows="10" required></textarea>
+
+
+                    <input type="submit" value="Submit" onclick="Client.handleSubmit(event)">
+                </form>
+            </div>
+        </div>
+
+        <div id="Classification_T" class="w3-container w3-border city" style="display:none">
+            <h3>Classification by Taxonomy</h3>
+            <hr>
+            <!-- Form -->
+            <div class="container_form">
+                <form>
+                    <label for="input_type">Selet Input Type</label> <br>
+                    <select class="input_type" name="input_type">
+                        <option value="URL">URL</option>
+                        <option value="TEXT">TEXT</option>>
+                    </select> <br>
+
+                    <label for="contentType">Selet Content Type</label> <br>
+                    <select id="contentType" name="contentType">
+                        <option value="1">News articles/Blog posts</option>
+                        <option value="2">Websites/Advertisement</option>>
+                    </select> <br>
+
+                    <label for="t_r_input">Enter Text or URL Acc to Input Type</label>
+                    <textarea name="t_r_input" class="t_r_input" cols="30" rows="10" required></textarea>
+
+
+                    <input type="submit" value="Submit" onclick="Client.handleSubmit(event)">
+                </form>
+            </div>
+        </div>
+
+        <div id="Sentiment_Analysis" class="w3-container w3-border city" style="display:none">
+            <h2>Sentiment Analysis</h2>
+            <hr>
+            <!-- Form -->
+            <div class="container_form">
+                <form>
+                    <label for="input_type">Selet Input Type</label> <br>
+                    <select class="input_type" name="input_type">
+                        <option value="URL">URL</option>
+                        <option value="TEXT">TEXT</option>>
+                    </select> <br>
+
+                    <label for="mode">Selet Content Type</label> <br>
+                    <select id="mode" name="mode">
+                        <option value="1">Tweet</option>
+                        <option value="2">Document</option>>
+                    </select> <br>
+
+                    <label for="t_r_input">Enter Text or URL Acc to Input Type</label>
+                    <textarea name="t_r_input" class="t_r_input" cols="30" rows="10" required></textarea>
+
+
+                    <input type="submit" value="Submit" onclick="Client.handleSubmit(event)">
+                </form>
+            </div>
+        </div>
+
+        <div id="Summarization" class="w3-container w3-border city" style="display:none">
+            <h2>Summarization</h2>
+            <hr>
+            <!-- Form -->
+            <div class="container_form">
+                <form>
+                    <label for="input_type">Selet Input Type</label> <br>
+                    <select class="input_type" name="input_type">
+                        <option value="URL">URL</option>
+                        <option value="TEXT">TEXT</option>>
+                    </select> <br>
+
+                    <label for="sentences_number">No of Sentences Required</label> <br>
+                    <input type="text" id="sentences_number" required> <br>
+
+                    <label for="t_r_input">Enter Text or URL Acc to Input Type</label>
+                    <textarea name="t_r_input" class="t_r_input" cols="30" rows="10" required></textarea>
+
+                    <input type="submit" value="Submit" onclick="Client.handleSubmit(event)">
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Webpage Footer Section -->
+    <footer>
+        <h6>Developed By : Asad Rasheed Lodhi</h6>
+    </footer>
+
+
+    <!-- Webpage Modal -->
+    <!-- Result Modal -->
+    <div id="id02" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-teal">
+                <span onclick="Client.closeResultModal()" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h3
+                    style="text-align: center; font-family: 'Roboto Condensed', sans-serif;font-size: 20px;font-weight: bold;">
+                    Result</h3>
+            </header>
+            <div class="w3-container" id="entryHolder">
+                <!-- Here The UI data will shown Which is Created by Client Side Js -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Response Model -->
+    <!-- Weather Modal -->
+    <div id="id03" class="w3-modal w3-animate-opacity" style="display: hidden;">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-teal">
+                <span onclick="Client.closeResponseModal()"
+                    class="w3-button w3-large w3-display-topright">&times;</span>
+                <h3 id="response_heading"
+                    style="text-align: center; font-family: 'Roboto Condensed', sans-serif;font-size: 20px;font-weight: bold;margin-bottom: 20px;">
+                    Current Weather</h3>
+            </header>
+            <div id="response" class="w3-container">
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- Service Worker -->
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
